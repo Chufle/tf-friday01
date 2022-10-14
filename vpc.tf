@@ -123,7 +123,7 @@ resource "aws_instance" "instance01" {
   associate_public_ip_address = true
   subnet_id                   = aws_subnet.publicsubnet01.id
   vpc_security_group_ids      = [aws_security_group.basic.id]
-  key_name                    = "mykey1"
+#  key_name                    = "mykey1"
   user_data = file("userdata.sh")
   tags = {
     Name = "Instance 01"
